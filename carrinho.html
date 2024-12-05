@@ -1,0 +1,161 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.D.H.I</title>
+    <link rel="stylesheet" href="css/carrinho.css">
+    <script src="https://kit.fontawesome.com/401873f18c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+    
+            <div class="logo">
+                <a href="index.html"><img src="img/Apalpando-as-bolas.gif"></a>
+    
+            </div>
+    
+            <form action=" " method="post">
+                <div class="container-busca">
+                    <input type="search" id="busca" name="q" placeholder="Pesquise">
+                    <button type="submit"></button>
+                </div>
+    
+            </form>
+    
+            <div class="menu">
+    
+                <ul class="bnt">
+                    <li class="shop">
+                        <a href="carrinho.html"><img src="img/carrinho.png" width="40px"></a>
+                    </li>
+                    <li class="user">
+                        <a href="autentificação.html"><img src="img/conta.png" width="40px"></a>
+                    </li>
+                </ul>
+            </div>
+    
+        </header>
+        
+        
+
+    <!--Carrinho-->
+
+
+    
+    
+        <div class="carrinho">
+
+            <h1>Carrinho de Compras</h1>
+
+    
+    <table id="cart">
+        <tr>
+        <th>Produto</th>
+        <th>Imagem</th>
+        <th>Quantidade</th>
+        <th>Preço</th>
+        <th>Remover</th>
+        </tr>
+        <tr>
+        <td>A menina que roubava livros</td>
+        <td><img src="img/a menina que roubava livros.jpg" alt="Item 1" class="product-img"></td>
+        <td class="quant">1</td>
+        <td>R$ 9,99</td>
+        <td><button class="remove-button">Remover</button></td>
+        </tr>
+        <tr>
+        <td>O menino do pijama listrado</td>
+        <td><img src="img/o menino do pijama listrado.jpg" alt="Item 2" class="product-img"></td>
+        
+        <td class="quant">1</td>
+        <td>R$ 19,99</td>
+        <td><button class="remove-button">Remover</button></td>
+        </tr>
+        <tr>
+        <td>Direitos humanos e refugiados</td>
+        <td><img src="img/direitos humanos e refugiado.jpg" alt="Item 3" class="product-img"></td>
+        <td class="quant">1</td>
+        <td>R$ 14,99</td>
+        <td><button class="remove-button">Remover</button></td>
+        </tr>
+        <tr>
+        <td id="total" colspan="4">Total:</td>
+        <td>R$ 44,97</td>
+        </tr>
+        </table>
+        
+        <button class="button">Finalizar Compra</button>
+        </div>
+    
+        <script>
+            // Script para remover item do carrinho
+            var removeButtons = document.getElementsByClassName("remove-button");
+            
+            for (var i = 0; i < removeButtons.length; i++) {
+            var button = removeButtons[i];
+            button.addEventListener("click", function() {
+                var row = this.parentNode.parentNode;
+                row.parentNode.removeChild(row);
+            });
+            }
+        </script>
+
+
+
+
+
+
+                <!--Rodapé-->
+                <footer>
+                    <div class="container-footer">
+                        <div class="row-footer">
+                            
+                            <div class="footer-col">
+                                <h4>Empresa</h4>
+                                <ul>
+                                    <li><a href="sobrenos.html">Sobre Nos</a></li>
+                                    <li><a href="#">Nossos serviços</a></li>
+                                    <li><a href="#">Políticas de privacidade</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="footer-col">
+                                <h4>Obtenha Ajuda</h4>
+                                <ul>
+                                    <li><a href="#">Contato</a></li>
+                                    <li><a href="#">Envio</a></li>
+                                    <li><a href="#">Devoluções</a></li>
+                                    <li><a href="#">Status do pedido</a></li>
+                                    <li><a href="#">Opções de pagamento</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="footer-col">
+                                <h4>Cadastrar-se</h4>
+                                <div class="form-insc">
+                                    <form>
+                                        <input type="email" placeholder="Digite o seu email" required>
+        
+                                        <button>Cadastrar-se</button>
+                                    </form>
+                                </div>
+        
+                                <div class="rede-social">
+                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </footer>
+        
+                <div class="direitos">
+                    <a href="#">A.D.H.I &#169 2024 Todos os direitos reservados.</a>
+                </div>
+</body>
+</html>
